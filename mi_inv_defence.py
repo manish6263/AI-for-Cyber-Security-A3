@@ -1,10 +1,3 @@
-# mi_inv_defense.py
-"""
-Membership inference defense (baseline vs label-smoothing + temp scaling)
-and model inversion defense (gradient regularization sweep).
-Saves defense_mi.csv, defense_inversion.csv, and inversion_defended.png
-"""
-
 import numpy as np
 import pandas as pd
 import torch, torch.nn.functional as F

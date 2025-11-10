@@ -7,7 +7,7 @@
 
 ---
 
-## 🧠 Overview
+## Overview
 
 This project implements **four defense strategies** against common attacks on deep learning models trained with CIFAR-10:
 
@@ -23,11 +23,11 @@ All results are saved in the `./output/` directory.
 
 ---
 
-## ⚙️ Environment Setup
+## Environment Setup
 
 All code runs on **Python ≥ 3.9** with GPU acceleration (recommended).
 
-### 1️⃣ Install Dependencies
+### 1 Install Dependencies
 
 Run the following commands in your Kaggle or local terminal:
 
@@ -36,7 +36,7 @@ pip install torch torchvision torchaudio --extra-index-url https://download.pyto
 pip install lpips scikit-learn tqdm matplotlib pandas
 ```
 
-### 2️⃣ Directory Structure
+### 2️ Directory Structure
 
 ```
 assignment3/
@@ -62,7 +62,7 @@ The scripts automatically create:
 
 ---
 
-## 🧩 Running the Code
+## Running the Code
 
 ### Option A: Run each defense separately
 
@@ -90,7 +90,7 @@ This will create six plots in the `plots/` directory.
 
 ---
 
-## 📊 Output Summary
+## Output Summary
 
 After execution, the `output/` folder will contain:
 
@@ -104,7 +104,7 @@ After execution, the `output/` folder will contain:
 | `inversion_defended.png` | Final inversion image after defense |
 
 
-## 📈 Example Plots (from `plot.py`)
+## Example Plots (from `plot.py`)
 
 | Plot | Description |
 |------|-------------|
@@ -117,7 +117,7 @@ After execution, the `output/` folder will contain:
 
 ---
 
-## 🧪 Expected Results (Latest Run)
+## Expected Results (Latest Run)
 
 | Defense | Key Metric | Observation |
 |----------|-------------|-------------|

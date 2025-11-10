@@ -1,9 +1,3 @@
-# adv_defense.py
-"""
-Adversarial defense script: FGSM adversarial training sweep.
-Saves ./output_defenses/defense_adversarial.csv with rows for each epsilon.
-"""
-
 import torch, torch.nn.functional as F
 import pandas as pd
 from utils import create_resnet18, get_loaders, eval_acc, denorm, OUTDIR, DEVICE

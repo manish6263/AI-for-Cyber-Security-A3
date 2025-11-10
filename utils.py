@@ -1,9 +1,3 @@
-# utils.py
-"""
-Shared utilities for Assignment 3 scripts.
-Contains data loaders, model constructor, evaluation helpers, and denorm.
-"""
-
 import os
 import torch
 import torch.nn as nn

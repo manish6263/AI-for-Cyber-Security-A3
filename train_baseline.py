@@ -1,9 +1,3 @@
-# train_baseline.py
-"""
-Train baseline ResNet-18 on CIFAR-10 and save the model weights.
-Outputs baseline accuracy and saves model to OUTDIR/baseline.pth
-"""
-
 import torch, torch.nn.functional as F
 import pandas as pd
 from utils import get_loaders, create_resnet18, eval_acc, OUTDIR, DEVICE
@@ -15,7 +9,7 @@ def train_baseline(epochs=30, lr=0.1):
     sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=epochs)
 
     history = []
-    print("🚀 Training baseline ResNet-18...")
+    print("Training baseline ResNet-18")
     for e in range(1, epochs+1):
         model.train()
         epoch_loss = 0.0
@@ -34,7 +28,7 @@ def train_baseline(epochs=30, lr=0.1):
         history.append({"epoch": e, "train_loss": epoch_loss/batches})
     acc_final = eval_acc(model, test_loader)
     torch.save(model.state_dict(), f"{OUTDIR}/baseline.pth")
-    print(f"✅ Baseline done. Clean acc={acc_final:.4f}")
+    print(f"Baseline done. Clean acc={acc_final:.4f}")
     pd.DataFrame(history).to_csv(f"{OUTDIR}/train_history_baseline.csv", index=False)
     return model, trainset, testset, train_loader, test_loader
 

@@ -1,9 +1,3 @@
-# poison_defense.py
-"""
-Poisoning defense: Spectral signature filtering parameter sweep.
-Saves ./output_defenses/defense_poison.csv
-"""
-
 import numpy as np
 import pandas as pd
 from sklearn.decomposition import TruncatedSVD
